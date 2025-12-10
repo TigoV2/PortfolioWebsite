@@ -1,9 +1,9 @@
 {
   "projects": [
         {
-        "img": "../images/project/",
+        "img": "../images/project/portfoliowebsite.png",
         "title": "Portefolio Website",
-        "description": "My personal portfolio website </br> (you are currently here).",
+        "description": "My personal portfolio website. </br> (You are currently here).",
         "link": "",
         "github": "https://github.com/TigoV2/PortfolioWebsite"
     },
