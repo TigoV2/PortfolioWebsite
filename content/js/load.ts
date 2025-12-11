@@ -71,12 +71,6 @@ async function projectFields(): Promise<void> {
                     <p class="card-text">${project.description || 'No description available.'}</p>
             `;
 
-            if (project.tags && project.tags.length > 0) {
-                project.tags.forEach(tag => {
-                    cardContent += `<span class="badge badge-tag text-dark me-1 mb-1">${tag}</span>`;
-                });
-            }
-
             cardContent += `<br>`;
 
             if (project.link) {
