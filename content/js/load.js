@@ -24,7 +24,7 @@ async function projectFields() {
         return;
     projectsRow.innerHTML = `
         <div class="col-12 text-center">
-            <h2 class="mb-4">My Work</h2>
+            <h1 class="mb-4">My Work</h1>
             <p>Here is a selection of some of my recent projects.</p>
         </div>
     `;
