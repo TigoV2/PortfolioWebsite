@@ -3,23 +3,30 @@
         {
         "img": "../../content/images/project/portfoliowebsite.png",
         "title": "Portfolio Website",
-        "description": "My personal portfolio website. </br> (You are currently here).",
+        "description": "This is my personal portfolio website, </br> Where you can explore my projects, CV, and creative journey. </br> Discover my skills, passion, and vision. </br> (You're currently on this page!)",
         "link": "",
         "github": "https://github.com/TigoV2/PortfolioWebsite"
     },
     {
         "img": "../../content/images/project/gooberos.jpg",
         "title": "Goober OS",
-        "description": "A linux like \"Web OS\" command line operating system made in JavaScript, HTML and CSS for a make-a-thon.",
+        "description": "A linux like \"Web OS\" command line operating system made for a make-a-thon using: </br> JavaScript, HTML and CSS.",
         "link": "https://jeav2.github.io/gooberos/",
         "github": "https://github.com/JeaV2/gooberos"
     },
     {
       "img": "../../content/images/project/TypeScript.avif",
       "title": "API-Typescript project",
-      "description": "One of my current project, first TypeScript project.",
+      "description": "My current personal project using TypeScript and Python, to learn TypeScript and APIs. </br> Made for hypixel bedwars players. </br> (Work in progress).",
       "link": "",
       "github": ""
+    },
+    {
+      "img": "",
+      "title": "Pokemon-Terrainium",
+      "description": "Pokemon Terrainium is a fan made Pokemon game made in RPG Maker XP, My friend and I are working on right now.",
+      "link": "",
+      "github": "https://github.com/dragonfreddy5/Pokemon-Terrainium"
     }
   ]
 }

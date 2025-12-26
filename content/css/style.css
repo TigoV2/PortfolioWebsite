@@ -9,6 +9,14 @@
     color: whitesmoke;
 }
 
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-image: url(../images/background.png);
     background-color: transparent;
@@ -205,6 +213,12 @@ span{
 #projects-container .card:hover {
     transform: scale(1.003);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#projects-container .card-img-top {
+    max-width: 100%;
+    max-height: 325px;
+    object-fit: contain;
 }
 
 #projects-container .card-title {
