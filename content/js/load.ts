@@ -11,28 +11,22 @@ type Project = {
 
 const fetchProjects = async (): Promise<Project[]> => {
     try {
-        const response = await fetch('../../content/data/projects.json/projects.json');
+        const response = await fetch('../../content/data/projects.json');
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
         }
-        const json = await response.json();
-        if (!json.projects || !Array.isArray(json.projects)) {
-            throw new Error('Invalid projects data format.');
-        }
-        return json.projects;
+        const { projects } = await response.json();
+        return projects || [];
     } catch (error) {
         console.error('Error fetching projects:', error);
         return [];
     }
-};
+}
 
-const logMissingField = (projectTitle: string, field: string) => {
-    console.warn(`Project "${projectTitle}" is missing a ${field}.`);
-};
+const logMissingField = (projectTitle: string, field: string) => console.warn(`Project "${projectTitle}" is missing a ${field}.`);
 
 async function projectFields(): Promise<void> {
     if (!projectsRow) return;
-
     projectsRow.innerHTML = `
         <div class="col-12 text-center">
             <h1 class="mb-4">My Work</h1>
@@ -50,6 +44,8 @@ async function projectFields(): Promise<void> {
             `;
             return;
         }
+
+        projectsRow.innerHTML = ''; 
 
         projects.forEach((project: Project) => {
             const col = document.createElement('div');
