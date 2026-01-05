@@ -16,9 +16,11 @@ const fetchProjects = async () => {
         return [];
     }
 };
+
 const logMissingField = (projectTitle, field) => {
     console.warn(`Project "${projectTitle}" is missing a ${field}.`);
 };
+
 async function projectFields() {
     if (!projectsRow)
         return;
@@ -60,7 +62,12 @@ async function projectFields() {
             cardContent += `<br>`;
 
             if (project.link) {
-                cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
+                if (`${project.link}`.includes('github.io')) {
+                    cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
+                }
+                else {
+                    cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Project Link</a>`;
+                }
             } else {
                 logMissingField(project.title || 'Untitled', 'project link');
             }

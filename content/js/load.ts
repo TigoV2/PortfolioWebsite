@@ -11,7 +11,7 @@ type Project = {
 
 const fetchProjects = async (): Promise<Project[]> => {
     try {
-        const response = await fetch('../data/projects.json');
+        const response = await fetch('../../content/data/projects.json/projects.json');
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
         }
@@ -74,7 +74,12 @@ async function projectFields(): Promise<void> {
             cardContent += `<br>`;
 
             if (project.link) {
-                cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
+                if (`${project.link}`.includes('github.io')){
+                    cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
+                }
+                else {
+                    cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Project Link</a>`;
+                }
             } else {
                 logMissingField(project.title || 'Untitled', 'project link');
             }
