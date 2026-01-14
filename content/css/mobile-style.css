@@ -10,7 +10,7 @@
   }
 
   #mainNavbar {
-    margin-left: 12rem;
+    margin-left: 12.5rem;
   }
 
   #mainNavbar .navbar-nav {
@@ -23,9 +23,15 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 410px) {
   #mainNavbar {
-    margin-left: 9.5rem;
+    margin-left: 10rem;
+  }
+}
+
+@media (max-width: 389px) {
+  #mainNavbar {
+    margin-left: 9rem;
   }
 }
 
