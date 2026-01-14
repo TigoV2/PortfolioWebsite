@@ -23,6 +23,18 @@
   }
 }
 
+@media (max-width: 390px) {
+  #mainNavbar {
+    margin-left: 9.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #mainNavbar {
+    margin-left: 8rem;
+  }
+}
+
 
 @media (max-width: 768px) {
     .home {
