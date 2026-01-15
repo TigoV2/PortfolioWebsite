@@ -188,13 +188,9 @@ span{
     right: -8px;
 }
 
-/* Contact page */
-#contactimage {
-    width: 34vh;
-    border-radius: 25%;
-    background-color: white;
-    transition: 0.2s linear;
-    box-shadow: 0 0 25px #b74b4b;
+/* CV page */
+.pdf-wrapper {
+  --bs-aspect-ratio: 141%;
 }
 
 /* Work page */
@@ -255,4 +251,13 @@ span{
     background-color: #222;
     color: white;
     transform: scale(1.1);
+}
+
+/* Contact page */
+#contactimage {
+    width: 34vh;
+    border-radius: 25%;
+    background-color: white;
+    transition: 0.2s linear;
+    box-shadow: 0 0 25px #b74b4b;
 }

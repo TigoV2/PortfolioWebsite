@@ -1,3 +1,13 @@
+#mainNavbar {
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    contain: layout paint;
+    transform: translateX(0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
 @media (max-width: 768px) {
  .navbar-brand.logo {
     margin-left: 0;
@@ -23,7 +33,13 @@
   }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 429px) {
+  #mainNavbar {
+    margin-left: 12.5rem;
+  }
+}
+
+@media (max-width: 409px) {
   #mainNavbar {
     margin-left: 11rem;
   }
@@ -31,11 +47,17 @@
 
 @media (max-width: 389px) {
   #mainNavbar {
+    margin-left: 10rem;
+  }
+}
+
+@media (max-width: 369px) {
+  #mainNavbar {
     margin-left: 9rem;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 349px) {
   #mainNavbar {
     margin-left: 8rem;
   }
@@ -78,5 +100,13 @@
   .ratio iframe, .ratio embed {
     min-height: 100vw;
     height: 125vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .pdf-wrapper iframe,
+  .pdf-wrapper embed {
+    width: 100%;
+    height: clamp(60vh, 100vw, 85vh);
   }
 }
