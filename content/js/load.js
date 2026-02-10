@@ -61,6 +61,21 @@ async function projectFields() {
 
             cardContent += `<br>`;
 
+            if (project.subContent && project.subContent.length > 0) {
+                project.subContent.forEach(sub => {
+                    cardContent += `
+                    <details class="mb-2">
+                    <summary class="fw-bold">Custom Content</summary>
+                    <p class="card-text"><small>${sub.title}</small></p>
+                    <p class="card-text"><small>${sub.description}</small></p>
+                    </details>
+                `;
+                });
+            }
+            else {
+                logMissingField(project.title || 'Untitled', 'subcontent');
+            }
+
             if (project.link) {
                 if (`${project.link}`.includes('github.io')) {
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;

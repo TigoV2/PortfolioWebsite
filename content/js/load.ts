@@ -1,5 +1,10 @@
 const projectsRow = document.getElementById('projects-container');
 
+type SubContent = {
+    title: string;
+    description: string;
+};
+
 type Project = {
     title: string;
     description: string;
@@ -7,6 +12,7 @@ type Project = {
     tags?: string[];
     link?: string;
     github?: string;
+    subContent?: SubContent[];
 };
 
 const fetchProjects = async (): Promise<Project[]> => {
@@ -69,6 +75,20 @@ async function projectFields(): Promise<void> {
 
             cardContent += `<br>`;
 
+            if (project.subContent && project.subContent.length > 0) {
+                  project.subContent.forEach((sub) => {
+                    cardContent += `
+                    <details class="mb-2">
+                    <summary class="fw-bold">Custom Content</summary>
+                    <p class="card-text"><small class="text-muted">${sub.title}</small></p>
+                    <p class="card-text"><small class="text-muted">${sub.description}</small></p>
+                    </details>
+                `;
+                });
+            } else {
+                logMissingField(project.title || 'Untitled', 'subcontent');
+            }
+
             if (project.link) {
                 if (`${project.link}`.includes('github.io')){
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
@@ -103,3 +123,5 @@ async function projectFields(): Promise<void> {
 }
 
 projectFields();
+
+export {};
