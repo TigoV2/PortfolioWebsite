@@ -67,22 +67,56 @@ async function projectFields(): Promise<void> {
             `;
 
             for (const tag of project.tags || []) {
-                cardContent += `<span class="badge badge-tag text-dark me-1 mb-1">${tag}</span>`;
+                let tagColor = '';
+                switch (tag) {
+                    case 'HTML':
+                        tagColor = 'html';
+                        break;
+                    case 'CSS':
+                        tagColor = 'css';
+                        break;
+                    case 'JavaScript':
+                        tagColor = 'js';
+                        break;
+                    case 'TypeScript':
+                        tagColor = 'ts';
+                        break;
+                    case 'PHP':
+                        tagColor = 'php';
+                        break;
+                    case 'Python':
+                        tagColor = 'python';
+                        break;
+                    case 'Ruby':
+                        tagColor = 'ruby';
+                        break;
+                    case 'Bootstrap':
+                        tagColor = 'bootstrap';
+                        break;
+                    case 'API':
+                        tagColor = 'api';
+                        break;
+                    case 'RPG Maker XP':
+                        tagColor = 'rpgmakerxp';
+                        break;
+                }
+                cardContent += `<span class="${tagColor} me-1 mb-1">${tag}</span>`;
             }
             
             cardContent += `<br>`;
 
             if (project.subContent && project.subContent.length > 0) {
-                  project.subContent.forEach((sub) => {
+                project.subContent.forEach(sub => {
                     cardContent += `
                     <details class="mb-2">
                     <summary class="fw-bold">Custom Content</summary>
-                    <p class="card-text"><small class="text-muted">${sub.title}</small></p>
-                    <p class="card-text"><small class="text-muted">${sub.description}</small></p>
+                    <p class="card-text"><small>${sub.title}</small></p>
+                    <p class="card-text"><small>${sub.description}</small></p>
                     </details>
                 `;
                 });
-            } else {
+            }
+            else {
                 logMissingField(project.title || 'Untitled', 'subcontent');
             }
 

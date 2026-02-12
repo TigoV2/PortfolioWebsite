@@ -11,7 +11,7 @@
     {
         "img": "../../content/images/project/gooberos.jpg",
         "title": "Goober OS",
-        "description": "A linux like \"Web OS\" command line operating system made for a make-a-thon using: </br> JavaScript, HTML and CSS.",
+        "description": "A linux like \"Web OS\" command line operating system made for a make-a-thon competition. </br> We won in our year category!",
         "link": "https://jeav2.github.io/gooberos/",
         "github": "https://github.com/JeaV2/gooberos",
         "tags": ["JavaScript", "HTML", "CSS"]
@@ -19,7 +19,7 @@
     {
       "img": "../../content/images/project/TypeScript.avif",
       "title": "API-Typescript project",
-      "description": "My current personal project using TypeScript and Python, to learn TypeScript and APIs. </br> Made for hypixel bedwars players. </br> (Work in progress).",
+      "description": "My current personal project. <br> Made for hypixel bedwars players. </br> (Work in progress).",
       "link": "",
       "github": "",
       "tags": ["TypeScript", "Python", "API"]
