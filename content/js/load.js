@@ -19,12 +19,7 @@ const logMissingField = (projectTitle, field) => console.warn(`Project "${projec
 
 async function projectFields() {
     if (!projectsRow) return;
-    projectsRow.innerHTML = `
-        <div class="col-12 text-center">
-            <h1 class="mb-4">My Work</h1>
-            <p>Here is a selection of some of my recent projects.</p>
-        </div>
-    `;
+    projectsRow.innerHTML = ``;
 
     try {
         const projects = await fetchProjects();
@@ -36,8 +31,6 @@ async function projectFields() {
             `;
             return;
         }
-
-        projectsRow.innerHTML = '';
 
         projects.forEach((project) => {
             const col = document.createElement('div');
@@ -58,6 +51,10 @@ async function projectFields() {
                     <h5 class="card-title">${project.title || 'Untitled'}</h5>
                     <p class="card-text">${project.description || 'No description available.'}</p>
             `;
+
+            for (const tag of project.tags || []) {
+                cardContent += `<span class="badge badge-tag text-dark me-1 mb-1">${tag}</span>`;
+            }
 
             cardContent += `<br>`;
 

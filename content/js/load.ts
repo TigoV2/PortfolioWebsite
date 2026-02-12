@@ -33,12 +33,7 @@ const logMissingField = (projectTitle: string, field: string) => console.warn(`P
 
 async function projectFields(): Promise<void> {
     if (!projectsRow) return;
-    projectsRow.innerHTML = `
-        <div class="col-12 text-center">
-            <h1 class="mb-4">My Work</h1>
-            <p>Here is a selection of some of my recent projects.</p>
-        </div>
-    `;
+    projectsRow.innerHTML = ``;
 
     try {
         const projects = await fetchProjects();
@@ -51,11 +46,9 @@ async function projectFields(): Promise<void> {
             return;
         }
 
-        projectsRow.innerHTML = ''; 
-
         projects.forEach((project: Project) => {
-            const col = document.createElement('div');
-            col.className = 'col-md-6 col-lg-4 mb-4 d-flex';
+            const card = document.createElement('div');
+            card.className = 'col-md-6 col-lg-4 mb-4 d-flex';
 
             let cardContent = `<div class="card flex-fill h-100">`;
 
@@ -73,6 +66,10 @@ async function projectFields(): Promise<void> {
                     <p class="card-text">${project.description || 'No description available.'}</p>
             `;
 
+            for (const tag of project.tags || []) {
+                cardContent += `<span class="badge badge-tag text-dark me-1 mb-1">${tag}</span>`;
+            }
+            
             cardContent += `<br>`;
 
             if (project.subContent && project.subContent.length > 0) {
@@ -107,8 +104,8 @@ async function projectFields(): Promise<void> {
             }
 
             cardContent += `</div></div>`;
-            col.innerHTML = cardContent;
-            projectsRow.appendChild(col);
+            card.innerHTML = cardContent;
+            projectsRow.appendChild(card);
         });
     } catch (err) {
         console.error(`Unable to retrieve or display projects: ${err}`);
