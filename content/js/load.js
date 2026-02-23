@@ -94,10 +94,20 @@ async function projectFields() {
             if (project.subContent && project.subContent.length > 0) {
                 project.subContent.forEach(sub => {
                     cardContent += `
-                    <details class="mb-2">
+                    <details class="mb-2 style">
                     <summary class="fw-bold">Custom Content</summary>
                     <p class="card-text"><small>${sub.title}</small></p>
                     <p class="card-text"><small>${sub.description}</small></p>
+                `;
+
+                if (sub.github) {
+                    cardContent += `<a href="${sub.github}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Source Code</a>`;
+                }
+                else {
+                    logMissingField(sub.title || 'Untitled', 'GitHub link');
+                }
+
+                cardContent += `
                     </details>
                 `;
                 });

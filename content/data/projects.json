@@ -34,11 +34,13 @@
       "subContent": [
         {
           "title": "Gifted - HA",
-          "description": "A custom made plugin for Pokemon Terrainium, that adds a chance for the hidden ability to every gifted pokemon, like a starter or other pokemon that you get for free."
+          "description": "A custom made plugin for Pokemon Terrainium, that adds a chance for the hidden ability to every gifted pokemon, like a starter or other pokemon that you get for free.",
+          "github": "https://github.com/JeaV2/gooberos"
         },
         {
           "title": "Pokemon-Terranium Biomes",
-          "description": "A custom made plugin for Pokemon Terrainium, that adds biomes to the game, used for battle machanics"
+          "description": "A custom made plugin for Pokemon Terrainium, that adds biomes to the game, used for battle machanics",
+          "github": "https://github.com/JeaV2/gooberos"
         }
      ]
     }
