@@ -95,8 +95,7 @@ async function projectFields() {
                 project.subContent.forEach(sub => {
                     cardContent += `
                     <details class="mb-2 style">
-                    <summary class="fw-bold">Custom Content</summary>
-                    <p class="card-text"><small>${sub.title}</small></p>
+                    <summary class="fw-bold">${sub.title}</summary>
                     <p class="card-text"><small>${sub.description}</small></p>
                 `;
 
