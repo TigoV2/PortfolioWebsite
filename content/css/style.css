@@ -17,11 +17,9 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-body {
-    background-image: url(../images/background.png);
-    background-color: transparent;
+body{
+    background:url(../images/background.png) transparent;
 }
-
 .header {
     position: sticky;
     top: 0;
@@ -42,7 +40,6 @@ body {
 
 .logo {
     font-size: 2.3rem;
-    text-align: left;
     margin-left: 25px;
     transition: ease-in-out 0.7s;
     color: #b74b4b;
@@ -59,7 +56,6 @@ nav a {
     margin-left: 4rem;
     font-size: 1.3rem !important;
     font-weight: 500;
-    color: whitesmoke;
     text-decoration: none;
     border-bottom: 3px solid transparent;
     transition: color 0.3s ease;
@@ -78,9 +74,7 @@ section{
 
 .home{
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 8rem;
     margin-top: -3.25rem;
 }
 
@@ -105,7 +99,6 @@ span{
 }
 
 .home-img img{
-    position: relative;
     width: 34vh;
     border-radius: 50%;
     cursor: pointer;
@@ -139,13 +132,6 @@ span{
   box-shadow: 0 0 25px #b74b4b;
 }
 
-.social-icons a:hover{
-    color: black;
-    transform: scale(1.3) translateY(-5px);
-    background-color: #b74b4b;
-    box-shadow: 0 0 25px #b74b4b;
-}
-
 .typing-text{
     font-size: 34px;
     font-weight: 600;
@@ -159,7 +145,6 @@ span{
 
 .typing-text span::before{
     content: "Software Developer Student";
-    color: #b74b4b;
     animation: words 20s infinite;
 }
 
@@ -187,11 +172,6 @@ span{
     right: -8px;
 }
 
-/* CV page */
-.pdf-wrapper {
-  --bs-aspect-ratio: 141%;
-}
-
 /* Work page */
 #projects-container {
     margin-top: 2rem;
@@ -206,7 +186,7 @@ span{
 }
 
 #projects-container .card:hover {
-    transform: scale(1.003);
+    transform: scale(1.005);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -337,6 +317,14 @@ details[open].style summary::after {
     font-weight: bold;
 }
 
+.threejs {
+    background: linear-gradient(to bottom, #41b782 50%, #36495e 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
 .api {
     color: #FF8C00;
     font-weight: bold;
@@ -355,6 +343,12 @@ details[open].style summary::after {
     width: 34vh;
     border-radius: 25%;
     background-color: white;
+    cursor: pointer;
     transition: 0.2s linear;
     box-shadow: 0 0 25px #b74b4b;
+}
+
+#contactimage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #b74b4b;
 }

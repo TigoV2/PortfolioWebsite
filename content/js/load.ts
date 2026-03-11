@@ -94,6 +94,9 @@ async function projectFields(): Promise<void> {
                     case 'Bootstrap':
                         tagColor = 'bootstrap';
                         break;
+                    case 'Three.js':
+                        tagColor = 'threejs';
+                        break;
                     case 'API':
                         tagColor = 'api';
                         break;
