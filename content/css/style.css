@@ -184,7 +184,6 @@ span{
     position: relative;
     width: calc(100%+8px);
     height: 100%;
-    border-left: 3px solid black;
     right: -8px;
 }
 
