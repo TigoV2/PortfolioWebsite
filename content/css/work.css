@@ -1,0 +1,166 @@
+#projects-container {
+    margin-top: 2rem;
+}
+
+#projects-container .card {
+    background-color: rgb(0 0 0 / 0.5);
+    border: 3px solid #b74b4b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects-container .card:hover {
+    transform: scale(1.005);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#projects-container .card-img-top {
+    max-width: 100%;
+    max-height: 225px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+#projects-container .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #b74b4b;
+}
+
+#projects-container .btn {
+    margin: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#projects-container .btn-primary {
+    background-color: #b74b4b;
+    color: whitesmoke;
+}
+
+#projects-container .btn-primary:hover {
+    background-color: #8a3636;
+    color: white;
+    transform: scale(1.1) translateY(-0.1rem);
+}
+
+#projects-container .btn-secondary {
+    background-color: #444;
+    color: whitesmoke;
+}
+
+#projects-container .btn-secondary:hover {
+    background-color: #222;
+    color: white;
+    transform: scale(1.1) translateY(-0.1rem);
+}
+  
+details {
+  border-radius: 6px;
+}
+
+summary {
+  list-style: none;
+  padding: 0px 5px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.style p {
+  padding: 0px 10px 5px;
+  font-size: 0.75rem
+}
+
+.style summary {
+  position: relative;
+}
+
+.style summary::before, .style summary::after {
+  content: "";
+  position: absolute;
+  border-top: 3px solid;
+  width: 16px;
+  height: 0;
+  right: 20px;
+  top: 50%;
+}
+
+.style summary::after {
+  transform: rotate(90deg);
+}
+
+details[open].style summary::after {
+  display: none;
+}
+
+.html {
+    color: #F16524;
+    font-weight: bold;
+}
+
+.css {
+    color: #66309A;
+    font-weight: bold;
+}
+
+.js {
+    color: #F7E018;
+    font-weight: bold;
+}
+
+.ts {
+    color: #007acc;
+    font-weight: bold;
+}
+
+.php {
+    color: #787CB5;
+    font-weight: bold;
+}
+
+.python {
+    background: linear-gradient(to right, #306998 50%, #FFD43B 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.ruby {
+    color: #CC342D;
+    font-weight: bold;
+}
+
+.bootstrap {
+    color: #563d7c;
+    font-weight: bold;
+}
+
+.threejs {
+    background: linear-gradient(to bottom, #41b782 50%, #36495e 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.api {
+    color: #FF8C00;
+    font-weight: bold;
+}
+
+.rpgmakerxp {
+    background: radial-gradient(circle, #FFD43B 63%, #333333 37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}

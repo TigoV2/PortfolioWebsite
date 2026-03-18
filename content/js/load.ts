@@ -107,7 +107,7 @@ async function projectFields(): Promise<void> {
                 cardContent += `<span class="${tagColor} me-1 mb-1">${tag}</span>`;
             }
             
-            cardContent += `<br>`;
+            cardContent += `</div><div>`;
 
             if (project.subContent && project.subContent.length > 0) {
                 project.subContent.forEach(sub => {
@@ -127,16 +127,14 @@ async function projectFields(): Promise<void> {
                     </details>
                 `;
                 });
-            }
-            else {
+            } else {
                 logMissingField(project.title || 'Untitled', 'subcontent');
             }
 
             if (project.link) {
                 if (`${project.link}`.includes('github.io')){
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
-                }
-                else {
+                } else {
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Project Link</a>`;
                 }
             } else {

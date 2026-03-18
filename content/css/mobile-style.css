@@ -64,7 +64,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
@@ -96,18 +95,9 @@
     }
 }
 
-
 @media (max-width: 768px) {
   .ratio iframe, .ratio embed {
     min-height: 100vw;
     height: 125vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .pdf-wrapper iframe,
-  .pdf-wrapper embed {
-    width: 100%;
-    height: clamp(60vh, 100vw, 85vh);
   }
 }

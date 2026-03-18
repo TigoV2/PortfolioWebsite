@@ -5,11 +5,9 @@ const fetchProjects = async () => {
         const response = await fetch('../../content/data/projects.json');
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
-        }
-        const { projects } = await response.json();
+        } const { projects } = await response.json();
         return projects || [];
-    }
-    catch (error) {
+    } catch (error) {
         console.error('Error fetching projects:', error);
         return [];
     }
@@ -33,16 +31,16 @@ async function projectFields() {
         }
 
         projects.forEach((project) => {
-            const col = document.createElement('div');
-            col.className = 'col-md-6 col-lg-4 mb-4 d-flex';
+            const card = document.createElement('div');
+            card.className = 'col-md-6 col-lg-4 mb-4 d-flex';
 
             let cardContent = `<div class="card flex-fill h-100">`;
+
             if (project.img) {
                 cardContent += `
                     <img src="${project.img}" class="card-img-top" alt="${project.title || 'Project'} image">
                 `;
-            }
-            else {
+            } else {
                 logMissingField(project.title || 'Untitled', 'image');
             }
 
@@ -92,7 +90,7 @@ async function projectFields() {
                 cardContent += `<span class="${tagColor} me-1 mb-1">${tag}</span>`;
             }
 
-            cardContent += `<br>`;
+            cardContent += `</div><div>`;
 
             if (project.subContent && project.subContent.length > 0) {
                 project.subContent.forEach(sub => {
@@ -104,45 +102,38 @@ async function projectFields() {
 
                 if (sub.github) {
                     cardContent += `<a href="${sub.github}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Source Code</a>`;
-                }
-                else {
+                } else {
                     logMissingField(sub.title || 'Untitled', 'GitHub link');
                 }
-
                 cardContent += `
-                    </details>
+                </details>
                 `;
                 });
-            }
-            else {
+            } else {
                 logMissingField(project.title || 'Untitled', 'subcontent');
             }
 
             if (project.link) {
                 if (`${project.link}`.includes('github.io')) {
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
-                }
-                else {
+                } else {
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Project Link</a>`;
                 }
-            }
-            else {
+            } else {
                 logMissingField(project.title || 'Untitled', 'project link');
             }
-
+            
             if (project.github) {
                 cardContent += `<a href="${project.github}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Source Code</a>`;
-            }
-            else {
+            } else {
                 logMissingField(project.title || 'Untitled', 'GitHub link');
             }
-
+                        
             cardContent += `</div></div>`;
-            col.innerHTML = cardContent;
-            projectsRow.appendChild(col);
-        });
-    }
-    catch (err) {
+            card.innerHTML = cardContent;
+            projectsRow.appendChild(card);
+         });
+    } catch (err) {
         console.error(`Unable to retrieve or display projects: ${err}`);
         projectsRow.innerHTML += `
             <div class="col-12">
