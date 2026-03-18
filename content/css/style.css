@@ -40,13 +40,13 @@ span{
 }
 
 .home .home-content h1{
-    font: 6rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
 .home-content h3{
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
