@@ -24,6 +24,7 @@
     <!-- Performance -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="image" href="../../content/images/contact.png" fetchpriority="high">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../../content/css/style.css">
@@ -81,7 +82,7 @@
         <div class="container my-5">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6 text-center contact border-custom p-4">
-                    <img src="../../content/images/contact.png" id="contactimage" class="img-fluid mb-4" alt="Contact Image">
+                    <img src="../../content/images/contact.png" alt="Contact Image" id="contactimage" class="img-fluid mb-4" loading="eager">
             
                     <div class="social-icons d-flex justify-content-center gap-3 mb-4">
                         <a href="https://discord.com/users/tigofelix"><i class="fa-brands fa-discord"></i></a>
