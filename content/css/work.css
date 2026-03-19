@@ -58,6 +58,11 @@
     color: white;
     transform: scale(1.1) translateY(-0.1rem);
 }
+
+.date-helper {
+    font-style: italic;
+    margin: 0 0.5rem;
+}
   
 details {
   border-radius: 6px;

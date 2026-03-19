@@ -9,6 +9,7 @@ type SubContent = {
 type Project = {
     title: string;
     description: string;
+    age?: string;
     img?: string;
     tags?: string[];
     link?: string;
@@ -147,9 +148,21 @@ async function projectFields(): Promise<void> {
                 logMissingField(project.title || 'Untitled', 'GitHub link');
             }
 
+            const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
+            if (isoDateRegex.test(String(project.age))) {
+                cardContent += `<p class="card-text mt-2 text-end date-helper"><small><date data="${project.age}" mode="full"></date></small></p>`;
+            } else if (project.age === 'soon') {
+                cardContent += `<p class="card-text mt-2 text-end date-helper"><small>Soon™</small></p>`;
+            } else if (project.age === 'dead') {
+                cardContent += `<p class="card-text mt-2 text-end date-helper"><small>Discontinued™</small></p>`;
+            } else {
+            logMissingField(project.title || 'Untitled', 'age');
+            }
+
             cardContent += `</div></div>`;
             card.innerHTML = cardContent;
             projectsRow.appendChild(card);
+            updateDates();
         });
     } catch (err) {
         console.error(`Unable to retrieve or display projects: ${err}`);
