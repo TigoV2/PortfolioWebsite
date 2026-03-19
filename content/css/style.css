@@ -21,7 +21,7 @@ html::-webkit-scrollbar {
 }
 
 body{
-    background:url(../images/background.png) transparent;
+    background:url('../images/background.png') transparent;
 }
 
 section{
