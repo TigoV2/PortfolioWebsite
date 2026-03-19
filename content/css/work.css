@@ -16,7 +16,9 @@
 }
 
 #projects-container .card-img-top {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
     max-height: 225px;
     object-fit: cover;
     border-radius: 0;
