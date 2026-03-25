@@ -38,7 +38,7 @@ async function projectFields() {
 
             if (project.img) {
                 cardContent += `
-                    <img src="${project.img}" class="card-img-top" alt="${project.title || 'Project'} image" fetchpriority="eager">
+                    <img src="${project.img}" class="card-img-top" alt="${project.title || 'Project'} image" loading="eager" decoding="async" fetchpriority="high">
                 `;
             } else {
                 logMissingField(project.title || 'Untitled', 'image');
