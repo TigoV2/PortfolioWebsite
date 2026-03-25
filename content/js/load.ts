@@ -56,7 +56,7 @@ async function projectFields(): Promise<void> {
 
             if (project.img) {
                 cardContent += `
-                    <img src="${project.img}" class="card-img-top" alt="${project.title || 'Project'} image" loading="eager" decoding="async">
+                    <img src="${project.img}" class="card-img-top" alt="${project.title || 'Project'} image" loading="eager">
                 `;
             } else {
                 logMissingField(project.title || 'Untitled', 'image');

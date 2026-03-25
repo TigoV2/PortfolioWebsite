@@ -58,6 +58,7 @@ span{
 .home-img img{
     width: 34vh;
     height: auto;
+    aspect-ratio: 3.45 / 4;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s linear;
@@ -133,6 +134,8 @@ span{
 /* Contact page */
 #contactimage {
     width: 34vh;
+    height: auto;
+    aspect-ratio: 4 / 4;
     border-radius: 25%;
     background-color: white;
     cursor: pointer;
