@@ -1,3 +1,9 @@
+#project-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b74b4b;
+}
+
 #projects-container {
     margin-top: 2rem;
 }
