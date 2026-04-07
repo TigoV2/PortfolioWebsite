@@ -1,7 +1,7 @@
 .project-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #b74b4b;
+    color: var(--color-red-muted);
 }
 
 #projects-container {
@@ -10,7 +10,7 @@
 
 #projects-container .card {
     background-color: rgb(0 0 0 / 0.5);
-    border: 3px solid #b74b4b;
+    border: 3px solid var(--color-red-muted);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -33,7 +33,7 @@
 #projects-container .card-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #b74b4b;
+    color: var(--color-red-muted);
 }
 
 #projects-container .btn {
@@ -46,24 +46,24 @@
 }
 
 #projects-container .btn-primary {
-    background-color: #b74b4b;
-    color: whitesmoke;
+    background-color: var(--color-red-muted);
+    color: var(--color-whitesmoke);
 }
 
 #projects-container .btn-primary:hover {
     background-color: #8a3636;
-    color: white;
+    color: var(--color-white);
     transform: scale(1.1) translateY(-0.1rem);
 }
 
 #projects-container .btn-secondary {
     background-color: #444;
-    color: whitesmoke;
+    color: var(--color-whitesmoke);
 }
 
 #projects-container .btn-secondary:hover {
     background-color: #222;
-    color: white;
+    color: var(--color-white);
     transform: scale(1.1) translateY(-0.1rem);
 }
 

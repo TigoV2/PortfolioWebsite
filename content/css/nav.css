@@ -20,7 +20,7 @@
     font-size: 2.3rem;
     margin-left: 25px;
     transition: ease-in-out 0.7s;
-    color: #b74b4b;
+    color: var(--color-red-muted);
     font-weight: 800;
     cursor: pointer;
     text-decoration: none;
@@ -41,6 +41,6 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+    color: var(--color-red-muted);
+    border-bottom: 3px solid var(--color-red-muted);
 }
