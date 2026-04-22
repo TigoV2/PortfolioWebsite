@@ -74,6 +74,9 @@ async function projectFields() {
                     case 'Ruby':
                         tagColor = 'ruby';
                         break;
+                    case 'GDscript':
+                        tagColor = 'gdscript';
+                        break;
                     case 'Bootstrap':
                         tagColor = 'bootstrap';
                         break;
@@ -85,6 +88,9 @@ async function projectFields() {
                         break;
                     case 'RPG Maker XP':
                         tagColor = 'rpgmakerxp';
+                        break;
+                    case 'Godot Engine':
+                        tagColor = 'godot';
                         break;
                 }
                 cardContent += `<span class="${tagColor} me-1 mb-1">${tag}</span>`;
@@ -116,10 +122,15 @@ async function projectFields() {
             if (project.link) {
                 if (`${project.link}`.includes('github.io')) {
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Live Demo</a>`;
-                } else {
+                }
+                else if (`${project.link}`.includes('github.com')) {
+                    cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Download</a>`;
+                }
+                else {
                     cardContent += `<a href="${project.link}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">Project Link</a>`;
                 }
-            } else {
+            }
+            else {
                 logMissingField(project.title || 'Untitled', 'project link');
             }
             

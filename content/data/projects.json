@@ -19,6 +19,15 @@
         "tags": ["JavaScript", "HTML", "CSS"]
     },
     {
+        "img": "../../content/images/project/thorn.png",
+        "title": "Combat Exosuit Thorn",
+        "description": "A Plane-Shooter, Visual-Novel game made for a make-a-thon competition. </br> We won in our year category! <br> &nbsp",
+        "age": "2026-04-15",
+        "link": "https://github.com/JojosBizarreCoding/save-the-world/releases/tag/1.0.0",
+        "github": "https://github.com/JojosBizarreCoding/save-the-world/tree/main",
+        "tags": ["GDscript", "Godot Engine"]
+    },
+    {
         "img": "../../content/images/project/cb.png",
         "title": "city.blend",
         "description": "A 3D model of a city, made in blender. </br> It was made for a school assignment, a friend of mine used three.js to make a website to display the model.",

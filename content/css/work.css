@@ -152,6 +152,11 @@ details[open].style summary::after {
     font-weight: bold;
 }
 
+.gdscript {
+    color: #74267b;
+    font-weight: bold;
+}
+
 .bootstrap {
     color: #563d7c;
     font-weight: bold;
@@ -172,6 +177,14 @@ details[open].style summary::after {
 
 .rpgmakerxp {
     background: radial-gradient(circle, #FFD43B 63%, #333333 37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.godot {
+    background: radial-gradient(circle, #478CBF 63%, whitesmoke 37%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
