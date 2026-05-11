@@ -89,26 +89,47 @@ async function projectFields(): Promise<void> {
                     case 'Python':
                         tagColor = 'python';
                         break;
+                    case 'C':
+                        tagColor = 'c';
+                        break;
+                    case 'C++':
+                        tagColor = 'cpp';
+                        break;
+                    case 'C#':
+                        tagColor = 'csharp';
+                        break;
+                        case 'Rust':
+                        tagColor = 'rust';
+                        break;
                     case 'Ruby':
                         tagColor = 'ruby';
                         break;
                     case 'GDscript':
                         tagColor = 'gdscript';
                         break;
-                    case 'Bootstrap':
-                        tagColor = 'bootstrap';
-                        break;
-                    case 'Three.js':
-                        tagColor = 'threejs';
-                        break;
                     case 'API':
                         tagColor = 'api';
                         break;
+                    case 'Bootstrap':
+                        tagColor = 'bootstrap';
+                        break;
+                    case 'Vite':
+                        tagColor = 'vite';
+                        break;
+                    case 'Three.js':
+                        tagColor = 'threejs';
+                        break;                    
                     case 'RPG Maker XP':
                         tagColor = 'rpgmakerxp';
                         break;
                     case 'Godot Engine':
                         tagColor = 'godot';
+                        break;
+                    case 'Unreal Engine':
+                        tagColor = 'unrealengine';
+                        break;
+                    case 'Unity':
+                        tagColor = 'unity';
                         break;
                 }
                 cardContent += `<span class="${tagColor} me-1 mb-1">${tag}</span>`;

@@ -147,6 +147,20 @@ details[open].style summary::after {
     font-weight: bold;
 }
 
+.c, .cpp, .csharp {
+    background: linear-gradient( to right, #A8B9CC 0%, #00599C 50%, #68217A 100% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.rust {
+    color: #67737a;
+    font-weight: bold;
+
+}
+
 .ruby {
     color: #CC342D;
     font-weight: bold;
@@ -157,8 +171,21 @@ details[open].style summary::after {
     font-weight: bold;
 }
 
+.api {
+    color: #FF8C00;
+    font-weight: bold;
+}
+
 .bootstrap {
     color: #563d7c;
+    font-weight: bold;
+}
+
+.vite {
+    background: linear-gradient(to right, #646CFF 0%, #8B5CF6 45%, #FFD62E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-weight: bold;
 }
 
@@ -167,11 +194,6 @@ details[open].style summary::after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-weight: bold;
-}
-
-.api {
-    color: #FF8C00;
     font-weight: bold;
 }
 
@@ -185,6 +207,23 @@ details[open].style summary::after {
 
 .godot {
     background: radial-gradient(circle, #478CBF 63%, whitesmoke 37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.unrealengine {
+    background: radial-gradient(circle, #ffffff 0%, #cfcfcf 45%, #7a7a7a 63%, #1f1f1f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+
+.unity {
+    background: radial-gradient(circle, #4a4a4a 0%, #222222 45%, #111111 63%, #000000 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
