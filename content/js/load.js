@@ -2,7 +2,7 @@ const projectsRow = document.getElementById('projects-container');
 
 const fetchProjects = async () => {
     try {
-        const response = await fetch('../../content/data/projects.json');
+        const response = await fetch('https://raw.githubusercontent.com/TigoV2/projects/main/projects.json');
         if (!response.ok) {
             throw new Error(`Failed to fetch projects: ${response.statusText}`);
         } const { projects } = await response.json();
@@ -115,8 +115,6 @@ async function projectFields() {
                 </details>
                 `;
                 });
-            } else {
-                logMissingField(project.title || 'Untitled', 'subcontent');
             }
 
             if (project.link) {
