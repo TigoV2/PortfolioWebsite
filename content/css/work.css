@@ -6,6 +6,8 @@
 
 #projects-container {
     margin-top: 2rem;
+    width:  112%;
+    margin-left: -75px;
 }
 
 #projects-container .card {

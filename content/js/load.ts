@@ -50,7 +50,7 @@ async function projectFields(): Promise<void> {
 
         projects.forEach((project: Project) => {
             const card = document.createElement('div');
-            card.className = 'col-md-6 col-lg-4 mb-4 d-flex';
+            card.className = 'col-md-6 col-lg-3 mb-4 d-flex';
 
             let cardContent = `<div class="card flex-fill h-100">`;
 
