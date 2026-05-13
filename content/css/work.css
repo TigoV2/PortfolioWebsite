@@ -6,8 +6,26 @@
 
 #projects-container {
     margin-top: 2rem;
-    width:  112%;
-    margin-left: -80px;
+}
+
+@media (min-width: 1080px) {
+    #projects-container {
+        width:  112%;
+        margin-left: -5%;
+    }
+}
+
+@media (min-width: 1440px) {
+    #projects-container {
+        margin-left: -6.75%;
+    }
+    
+}
+
+@media (min-width: 2160px) {
+    #projects-container {
+        margin-left: -6.5%;
+    }
 }
 
 #projects-container .card {
