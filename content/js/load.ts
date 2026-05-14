@@ -68,6 +68,8 @@ async function projectFields(): Promise<void> {
                     <p class="card-text">${project.description || 'No description available.'}</p>
             `;
 
+            cardContent += `</div><div class="card-tags">`;
+
             for (const tag of project.tags || []) {
                 let tagColor = '';
                 switch (tag) {
