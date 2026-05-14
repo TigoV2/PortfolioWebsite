@@ -11,14 +11,14 @@
 @media (min-width: 798px) and (max-width: 2560px) {
     #projects-container {
         width:  112.5%;
-        margin-left: -7%;
+        margin-left: -6.25%;
     }
 }
 
 @media (min-width: 2560px) and (max-width: 3840px) {
     #projects-container {
         width: 137.5%;
-        margin-left: -19.5%;
+        margin-left: -18.75%;
     }
 }
 
