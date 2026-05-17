@@ -1,7 +1,7 @@
 # Portfolio Development Website
 **Version 3**
 
-The Development [Page](https://github.com/TigoV2/PortfolioWebsite)
+The released [Page](https://github.com/TigoV2/TigoV2.github.io)
 
 Credits to:\
 [JeaV2](https://github.com/JeaV2)\
