@@ -1,5 +1,5 @@
 # Portfolio Development Website
-**version 3**
+**Version 3**
 
 The Development [Page](https://github.com/TigoV2/PortfolioWebsite)
 
