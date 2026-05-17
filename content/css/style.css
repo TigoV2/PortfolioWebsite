@@ -114,16 +114,19 @@ span {
 }
 
 @keyframes words {
-    0%, 25% {
+    0%, 20% {
         content: "Software Developer Student";
     }
-    26%, 50% {
+    21%, 40% {
         content: "Back-end Development Enjoyer";
     }
-    51%, 75% {
+    41%, 60% {
         content: "Creative Problem Solver";
     }
-    76%, 100% {
+    61%, 80% {
+        content: "Full-Stack Explorer";
+    }
+    81%, 100% {
         content: "PC Tech Enthusiast";
     }
 }
@@ -137,6 +140,24 @@ span {
     right: -8px;
 }
 
+@media (min-width: 3840px) {
+    .home-content h2 {
+        font-size: 6rem;
+    }
+
+    .home-content h3 {
+        font-size: 7.5rem;
+    }
+
+    .home-content p {
+        font-size: 3.5rem;
+    }
+
+    .typing-text {
+        font-size: 50px;
+    }
+}
+
 /* CV Page */
 .ratio {
     min-height: 700px
@@ -147,9 +168,15 @@ span {
     min-height: 400px;
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 2560px) and (max-width: 3840px) {
     .ratio iframe, .ratio embed {
         min-height: 1000px;
+    }
+}
+
+@media (min-width: 3840px) {
+    .ratio iframe, .ratio embed {
+        min-height: 1200px;
     }
 }
 
@@ -168,4 +195,22 @@ span {
 #contactimage:hover {
     transform: scale(1.05);
     box-shadow: 0 0 50px var(--color-red-muted);
+}
+
+@media (min-width: 3840px) {
+    #contactimage {
+        width: 68vh;
+    }
+
+    .social-icons a,
+    .social-icons2 a {
+        width: 8rem;
+        height: 8rem;
+        font-size: 4rem;
+    }
+
+    .social-icons,
+    .social-icons2 {
+        font-size: 2rem;
+    }
 }

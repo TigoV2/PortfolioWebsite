@@ -44,3 +44,14 @@ nav a.active {
     color: var(--color-red-muted);
     border-bottom: 3px solid var(--color-red-muted);
 }
+
+@media (min-width: 3840px) {
+    .logo {
+        font-size: 4.6rem;
+    }
+
+    nav a {
+        font-size: 2.6rem !important;
+        margin-left: 6rem;
+    }
+}
