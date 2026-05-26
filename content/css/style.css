@@ -140,6 +140,24 @@ span {
     right: -8px;
 }
 
+@media (min-width: 2560px) and (max-width: 3840px) {
+    .home-content h2 {
+        font-size: 3.75rem;
+    }
+
+    .home-content h3 {
+        font-size: 5.25rem;
+    }
+
+    .home-content p {
+        font-size: 2rem;
+    }
+
+    .typing-text {
+        font-size: 38px;
+    }
+}
+
 @media (min-width: 3840px) {
     .home-content h2 {
         font-size: 6rem;

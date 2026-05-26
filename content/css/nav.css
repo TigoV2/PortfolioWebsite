@@ -45,6 +45,17 @@ nav a.active {
     border-bottom: 3px solid var(--color-red-muted);
 }
 
+@media (min-width: 2560px) and (max-width: 3840px) {
+    .logo {
+        font-size: 3.4rem;
+    }
+
+    nav a {
+        font-size: 2rem !important;
+        margin-left: 5rem;
+    }
+}
+
 @media (min-width: 3840px) {
     .logo {
         font-size: 4.6rem;
